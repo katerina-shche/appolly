@@ -1,3 +1,9 @@
+:root {
+    --royal-blue: #5956E9;
+    --gray: #6C6C72; 
+    --black: #232233;
+    --white: #fff;
+}
 *,
 ::before,
 ::after {
@@ -5,7 +11,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
 .wrapper {
     padding: 35px 134px 85px 134px;
     width: 100vw;
@@ -35,24 +43,29 @@ header .contacts .left {
 }
 header .contacts img {
     display: inline-block;
+    height: 18px;
+    width: 18px;
 }
 header .contacts .left span {
     display: inline-block;
     text-align: center;
-    margin-left: 35px;
+    margin-left: 36px;
     height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
 }
 header .contacts .left li {
     position: relative;
 }
-
 header .contacts .left img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
 header .contacts ul {
-    height: 20px;
+    height: 24px;
 }
+/* end of contacts on top */
 
 

@@ -1,8 +1,8 @@
 :root {
-    --royal-blue: #5956E9;
-    --gray: #6C6C72; 
-    --black: #232233;
-    --white: #fff;
+    --royal-blue: rgb(89, 86, 233);
+    --gray: rgb(108, 108, 114); 
+    --black: rgb(35, 34, 51);
+    --white: rgb(255, 255, 255);
 }
 *,
 ::before,

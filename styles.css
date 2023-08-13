@@ -1,0 +1,58 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 35px 134px 85px 134px;
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/background-image.png);
+    object-fit: cover;
+}
+header .contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+}
+/* those are ul-s */
+header .contacts .right,
+header .contacts .left {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-content: center;
+}
+header .contacts img {
+    display: inline-block;
+}
+header .contacts .left span {
+    display: inline-block;
+    text-align: center;
+    margin-left: 35px;
+    height: 20px;
+}
+header .contacts .left li {
+    position: relative;
+}
+
+header .contacts .left img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .contacts ul {
+    height: 20px;
+}
+
+

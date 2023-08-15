@@ -1,8 +1,10 @@
 :root {
     --royal-blue: rgb(89, 86, 233);
+    --light-blue: rgb(117, 114, 255);
     --gray: rgb(108, 108, 114); 
     --black: rgb(35, 34, 51);
     --white: rgb(255, 255, 255);
+
 }
 *,
 ::before,
@@ -15,9 +17,10 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 .wrapper {
-    padding: 35px 134px 85px 134px;
+    padding: 35px 134px 35px 134px;
     width: 100vw;
-    height: 100vh;
+    height: 100vh;  
+    min-height: 700px;
 }
 header {
     width: 100vw;
@@ -144,16 +147,106 @@ header .contacts ul {
 }
 /* end of the nav */
 /* start of the hero-section */
+.hero {
+    width:100%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero .left .content {
+    background: var(--white);
+    width: 570px;
+    height: 400px;
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    padding: 36px;
+}
+.hero .left .frame {
+    border: 10px var(--light-blue) solid;
+    width: 570px;
+    height: calc(400px + 62px);
+    position: relative;
+    left: 36px;  
+}
+.hero .right {
+    padding-top: 1%;
+    height: 100%;
+    width: 27%;
+}
+.hero .right img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+.hero .left .content h1 {
+    color: var(--royal-blue);
+    text-align: left;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 130%; /* 63.479px */
+    text-transform: uppercase;
+}
+.hero .left .content p {
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin: 20px 0 30px;
+}
+
+.hero .left .content .download-app h4 {
+    color: var(--black);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 37.5px; /* 150% */
+    text-transform: uppercase;
+}
+.app-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+.app-buttons a {
+    text-decoration: none;
+}
+.app-buttons a:visited {
+    color: #fff;
+}
+
 .app-buttons .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     background: #000;
     width: 150px;
     height: 46px;
     border: 1px gray solid;
     border-radius: 5px;
+    padding: 5px;
+}
+.app-buttons .btn span {
+    display: block;
+}
+.app-buttons .btn .btn-text span.call-to-action {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+}
+.app-buttons .btn .btn-text span.store-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #fff;
 }
 img.store-logo {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     color: #fff;
 }
 

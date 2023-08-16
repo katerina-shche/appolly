@@ -20,12 +20,14 @@ p.gray {
     color: var(--gray);
     font-size: 16px;
 }
-
-h1.dark,
-h2.dark,
-h3.dark,
-h4.dark {
+.dark {
     color: var(--black);
+}
+.light {
+    color: var(--white);
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
 }
 .wrapper {
     padding: 35px 134px 35px 134px;
@@ -295,8 +297,8 @@ border-radius: 10px;
 background: var(--white, #FFF);
 box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 padding: 30px 20px 20px 60px;
-
 }
+
 section.about .wrapper .about-box ul li h4 {
     font-size: 20px;
     font-style: normal;
@@ -316,4 +318,13 @@ section.about .wrapper .about-box ul li p.gray {
     margin: 12px  0 0 0;
     width: 100%;
     text-align: left;
+}
+/* end of about-section */
+/* begining of app-features-section */
+section.features {
+    height: 100%;
+    background: url(./images/app-features/background-rectangle-14.png);
+}
+section.features .wrapper {
+    height: 100%;
 }

@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     width: 100vw;
     height: 100vh;
+    min-height: 750px;
     background: url(./images/background-image.png);
     object-fit: cover;
 }
@@ -322,9 +323,40 @@ section.about .wrapper .about-box ul li p.gray {
 /* end of about-section */
 /* begining of app-features-section */
 section.features {
-    height: 100%;
+    height: 200vh;
+    min-height: 1710px;
     background: url(./images/app-features/background-rectangle-14.png);
 }
 section.features .wrapper {
     height: 100%;
+    border: 1px purple solid;
+}
+section.features .wrapper h2 {
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+    margin-top: 120px;
+    text-align: center;
+}
+section.features .wrapper p {
+    width: 50%;
+    margin: 18px auto;
+}
+section.features .wrapper .feature-box {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    border: 1px green solid;
+}
+section.features .wrapper .feature {
+    position: absolute;
+    border: 1px red solid;
+}
+/* img got box-shadow 40px and I cannot remove it in .png */
+section.features .wrapper img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 40px), calc(-50% + 40px));
 }

@@ -406,3 +406,35 @@ section.features .wrapper .feature.six {
     transform: translate(calc(-50% + 40px), calc(-50% + 40px));
 }
 /* end of app-features section */
+/* begining of slider */
+section.interface-look .slider-container {
+ display: flex;
+ flex-direction: row;
+}
+section.interface-look button {
+    width: 84px;
+    height: 84px;
+    color: var(--royal-blue);
+    background-color: var(--white);
+    border-radius: 50%;
+    border: 1px var(--royal-blue) solid;
+    position: relative;
+}
+section.interface-look button:hover {
+    background: var(--royal-blue);
+    color: #fff;
+}
+section.interface-look button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    fill: red;
+}
+section.interface-look button img:hover {
+    fill: var(--white);
+}
+section.interface-look #rightbtn img {
+    transform: rotate(180deg) translate(50%, 50%);
+}

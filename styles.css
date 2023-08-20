@@ -4,7 +4,7 @@
     --gray: rgb(108, 108, 114); 
     --black: rgb(35, 34, 51);
     --white: rgb(255, 255, 255);
-    --coefficient: 0.9;
+    --coefficient: 0.8;
 
 }
 *,
@@ -408,9 +408,23 @@ section.features .wrapper .feature.six {
 }
 /* end of app-features section */
 /* begining of slider */
+section.interface-look p {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 23px;
+}
+section.interface-look h2 {
+    text-align: center;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
 section.interface-look .slider-container {
     width: 100%;
-    height: 600px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -425,9 +439,18 @@ section.interface-look button {
     background-color: var(--white);
     border-radius: 50%;
     border: 1px var(--royal-blue) solid;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 5;
 }
+#leftbtn {
+    transform: translate(-652%, -50%);
+}
+#rightbtn {
+    transform: translate(550%, -50%);
+}
+
 section.interface-look button:hover {
     background: var(--royal-blue);
     color: #fff;
@@ -438,10 +461,10 @@ section.interface-look button svg {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-section.interface-look button svg:hover path {
+section.interface-look button:hover svg path {
     fill: var(--white);
 }
-section.interface-look #rightbtn img {
+section.interface-look #rightbtn svg  {
     transform: rotate(180deg) translate(50%, 50%);
 }
 section.interface-look .slider-container .slide {
@@ -450,47 +473,41 @@ section.interface-look .slider-container .slide {
     object-fit: cover;
     overflow: hidden;
     position: absolute;
+    top: 50%;
+    left: 50%;
     transition: all 1s ease-in-out;
 }
 section.interface-look .slider-container .slide.middle {
     width: calc(318px * var(--coefficient));
     height: calc(622px * var(--coefficient));
-    top: 50%; 
-    left: 50%; 
     transform: translate(-50%, -50%); 
+    opacity: 1;
     z-index: 4;
 }
 section.interface-look .slider-container .slide.middle.hidden {
-    background: red;
     opacity: 0;
     z-index: 0;
 }
 
 section.interface-look .slider-container .slide.secondright {
-    top: 50%; 
-    left: 50%; 
     transform: translate(60%, -50%); 
+    opacity: 1;
     z-index: 3;
 }
 section.interface-look .slider-container .slide.secondleft {
-    top: 50%; 
-    left: 50%; 
     transform: translate(-162%, -50%); 
+    opacity: 1;
     z-index: 3;
 }
 section.interface-look .slider-container .slide.thirdright {
-    top: 50%; 
-    left: 50%; 
     transform: translate(110%, -50%); 
-    z-index: 2;
     opacity: 0.5;
+    z-index: 2;
 }
 section.interface-look .slider-container .slide.thirdleft {
-    top: 50%; 
-    left: 50%; 
     transform: translate(-212%, -50%); 
-    z-index: 2;
     opacity: 0.5;
+    z-index: 2;
 }
 
 section.interface-look .slider-container .slide img {

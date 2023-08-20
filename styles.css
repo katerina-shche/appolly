@@ -484,9 +484,12 @@ section.interface-look .slider-container .slide.middle {
     opacity: 1;
     z-index: 4;
 }
-section.interface-look .slider-container .slide.middle.hidden {
-    opacity: 0;
-    z-index: 0;
+section.interface-look .slider-container .slide.hidden {
+    width: calc(318px * var(--coefficient));
+    height: calc(622px * var(--coefficient));
+    transform: translate(-50%, -50%); 
+    opacity: 1;
+    z-index: 4;
 }
 
 section.interface-look .slider-container .slide.secondright {

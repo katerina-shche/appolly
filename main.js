@@ -9,14 +9,21 @@ console.log(leftbtn);
 //functions
 const handleRightClick = () => {
  console.log('moove to the right')
- slides.forEach(slide => {
-    console.log(classesList.indexOf(slide.classList[1]))
- })
+ 
 }
 const handleLeftClick = () => {
+    let myClass = slides[0].classList[1];
     console.log('moove to the left')
+    slides.forEach((slide, index, slides) => {
+        console.log(slide, index, slides);
+        
+        if ( index < slides.length - 1 ) {
+            slide.classList.replace(slide.classList[1], slides[index + 1].classList[1])
+        } else if (index == slides.length - 1) { 
+            slide.classList.replace(slide.classList[1], myClass)}
+     })  
    }
-
+    
 //Event Listeners
 
 rightbtn.addEventListener('click', handleRightClick);

@@ -1,17 +1,25 @@
 const slides = document.querySelectorAll('.slide');
-const classesList = [...slides].map(i => i.classList[1]);
-console.log(classesList);
+
 const rightbtn = document.querySelector('#rightbtn');
 console.log(rightbtn);
 const leftbtn = document.querySelector('#leftbtn');
 console.log(leftbtn);
 
 //functions
-const handleRightClick = () => {
+const handleLeftClick = () => {
  console.log('moove to the right')
+ let classesList = [...slides].map(i => i.classList[1]);
+ slides.forEach((slide, index, slides) => {
+    if (index > 0) {
+        slide.classList.replace(slide.classList[1], classesList[index - 1])
+    } else if (index === 0) {
+        slide.classList.replace(slide.classList[1], classesList[classesList.length - 1])
+
+    }
+ })
  
 }
-const handleLeftClick = () => {
+const handleRightClick = () => {
     let myClass = slides[0].classList[1];
     console.log('moove to the left')
     slides.forEach((slide, index, slides) => {

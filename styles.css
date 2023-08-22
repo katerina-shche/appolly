@@ -429,7 +429,6 @@ section.interface-look .slider-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px red solid;
     position: relative;
 }
 section.interface-look button {
@@ -476,7 +475,6 @@ section.interface-look .slider-container .slide {
     left: 50%;
     transition: all 1s ease-in-out;
     border-radius: 30px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -488,7 +486,7 @@ section.interface-look .slider-container .slide.middle {
     transform: translate(-50%, -50%); 
     opacity: 1;
     z-index: 4;
-    border: 5px var(--gray) solid;
+    border: 10px var(--black) solid;
 }
 section.interface-look .slider-container .slide.hidden {
     width: calc(318px * var(--coefficient));

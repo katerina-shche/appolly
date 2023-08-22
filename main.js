@@ -6,6 +6,7 @@ const leftbtn = document.querySelector('#leftbtn');
 console.log(leftbtn);
 
 //functions
+// slider btns handlers
 const handleLeftClick = () => {
  console.log('moove to the right')
  let classesList = [...slides].map(i => i.classList[1]);
@@ -17,7 +18,6 @@ const handleLeftClick = () => {
 
     }
  })
- 
 }
 const handleRightClick = () => {
     let myClass = slides[0].classList[1];

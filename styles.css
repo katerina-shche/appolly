@@ -497,22 +497,22 @@ section.interface-look .slider-container .slide.hidden {
 }
 
 section.interface-look .slider-container .slide.secondright {
-    transform: translate(60%, -50%); 
+    transform: translate(70%, -50%); 
     opacity: 1;
     z-index: 3;
 }
 section.interface-look .slider-container .slide.secondleft {
-    transform: translate(-162%, -50%); 
+    transform: translate(-170%, -50%); 
     opacity: 1;
     z-index: 3;
 }
 section.interface-look .slider-container .slide.thirdright {
-    transform: translate(110%, -50%); 
+    transform: translate(120%, -50%); 
     opacity: 0.5;
     z-index: 2;
 }
 section.interface-look .slider-container .slide.thirdleft {
-    transform: translate(-212%, -50%); 
+    transform: translate(-220%, -50%); 
     opacity: 0.5;
     z-index: 2;
 }

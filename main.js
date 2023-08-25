@@ -12,6 +12,8 @@ console.log(leftbtn);
 const handleLeftClick = () => {
     // save current styles position on divs
  let classesList = [...slides].map(i => i.classList[1]);
+ let currentDot = document.querySelector('.dots-container svg.selected-dot');
+ 
     // move saved classes 1 div backwards
  slides.forEach((slide, index, slides) => {
     if (index > 0) {
@@ -22,14 +24,28 @@ const handleLeftClick = () => {
  })
 }
 const handleRightClick = () => {
-    let myClass = slides[0].classList[1];
-    slides.forEach((slide, index, slides) => {
-        if ( index < slides.length - 1 ) {
-            slide.classList.replace(slide.classList[1], slides[index + 1].classList[1])
-        } else if (index == slides.length - 1) { 
-            slide.classList.replace(slide.classList[1], myClass)}
-     })  
+    // save current styles position on divs
+ let classesList = [...slides].map(i => i.classList[1]);
+    // move saved classes 1 div backwards
+ slides.forEach((slide, index, slides) => {
+    if (index < slides.length - 1) {
+        slide.classList.replace(slide.classList[1], classesList[index + 1])
+    } else if (index == slides.length - 1) {
+        slide.classList.replace(slide.classList[1], classesList[0])
+        }
+ })
 }
+
+// the other way to handle right click
+//const handleRightClick = () => {
+//    let myClass = slides[0].classList[1];
+//    slides.forEach((slide, index, slides) => {
+//        if (index < slides.length - 1) {
+//            slide.classList.replace(slide.classList[1], slides[index + 1].classList[1])
+//        } else if (index == slides.length - 1) { 
+//            slide.classList.replace(slide.classList[1], myClass)}
+//     })  
+//}
 const handleDotClick = (index) => {
     console.log(index)
    let myClasses = [... classesListOnLoad.slice(index, classesListOnLoad.length), ...classesListOnLoad.slice(0, index)];

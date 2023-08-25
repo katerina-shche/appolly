@@ -408,6 +408,10 @@ section.features .wrapper .feature.six {
 }
 /* end of app-features section */
 /* begining of slider */
+section.interface-look .wrapper {
+    min-height: 100vh;
+    max-height: calc(100vh + 100px);
+}
 section.interface-look p {
     text-align: center;
     width: 70%;
@@ -519,6 +523,32 @@ section.interface-look .slider-container .slide.thirdleft {
 
 section.interface-look .slider-container .slide img {
     object-fit: cover;
-    
-    
+    width: 110%;
+}
+#slide2 img {
+    width: 135%;
+}
+#dots-container {
+    width: 154px;
+    margin: 40px auto;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#dots-container svg circle:hover {
+    fill: var(--white);
+    padding: 1px;
+}
+#dots-container svg:hover {
+    padding: 1px;
+    border: 2px var(--royal-blue) solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.selected-dot {
+    border: 2px var(--royal-blue) solid;
+    border-radius: 50%;
+}
+#dots-container svg.selected-dot circle {
+    fill: var(--white);
 }

@@ -31,7 +31,7 @@ const handleLeftClick = () => {
         slide.classList.replace(slide.classList[1], classesList[classesList.length - 1])
         }
  })
- setTimeout(() => {leftbtn.disabled = false}, 1000);
+ setTimeout(() => {leftbtn.disabled = false}, 100);
  
 }
 const handleRightClick = () => {
@@ -56,7 +56,7 @@ const handleRightClick = () => {
         slide.classList.replace(slide.classList[1], classesList[0])
         }
  })
- setTimeout(() => {rightbtn.disabled = false}, 1000);
+ setTimeout(() => {rightbtn.disabled = false}, 100);
 }
 
 const handleDotClick = (index) => {
@@ -78,7 +78,7 @@ const handleDotClick = (index) => {
             handleRightClick();
             counter--
             }
-        }, 1000)
+        }, 100)
     } else if (counter < 0) {
         handleLeftClick();
         counter++;
@@ -89,7 +89,7 @@ const handleDotClick = (index) => {
             handleLeftClick();
             counter++
             }
-        }, 1000)
+        }, 100)
     } 
 }  
 

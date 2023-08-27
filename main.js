@@ -12,8 +12,16 @@ console.log(leftbtn);
 const handleLeftClick = () => {
     // save current styles position on divs
  let classesList = [...slides].map(i => i.classList[1]);
- let currentDot = document.querySelector('.dots-container svg.selected-dot');
- 
+ let nextDot = undefined;   
+ let currentDot = document.querySelector('#dots-container svg.selected-dot');
+ //move selected dot to the left 
+ if ([...dots].indexOf(currentDot) === 0) {
+    nextDot = dots[dots.length-1];
+ } else if ([...dots].indexOf(currentDot) > 0) {
+    nextDot = currentDot.previousElementSibling;
+ }
+ currentDot.classList.remove('selected-dot');
+ nextDot.classList.add('selected-dot');
     // move saved classes 1 div backwards
  slides.forEach((slide, index, slides) => {
     if (index > 0) {
@@ -25,7 +33,17 @@ const handleLeftClick = () => {
 }
 const handleRightClick = () => {
     // save current styles position on divs
+ let nextDot = undefined;   
  let classesList = [...slides].map(i => i.classList[1]);
+ let currentDot = document.querySelector('#dots-container svg.selected-dot');
+ // move selected dot to the right
+ if ([...dots].indexOf(currentDot) < dots.length - 1) {
+    nextDot = currentDot.nextElementSibling;
+ } else if ([...dots].indexOf(currentDot) === dots.length - 1) {
+    nextDot = dots[0];
+ }
+ currentDot.classList.remove('selected-dot');
+ nextDot.classList.add('selected-dot');
     // move saved classes 1 div backwards
  slides.forEach((slide, index, slides) => {
     if (index < slides.length - 1) {

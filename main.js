@@ -10,6 +10,7 @@ console.log(leftbtn);
 //functions
 // slider btns handlers
 const handleLeftClick = () => {
+    leftbtn.disabled = true;
     // save current styles position on divs
  let classesList = [...slides].map(i => i.classList[1]);
  let nextDot = undefined;   
@@ -30,8 +31,11 @@ const handleLeftClick = () => {
         slide.classList.replace(slide.classList[1], classesList[classesList.length - 1])
         }
  })
+ setTimeout(() => {leftbtn.disabled = false}, 1000);
+ 
 }
 const handleRightClick = () => {
+    rightbtn.disabled = true;
     // save current styles position on divs
  let nextDot = undefined;   
  let classesList = [...slides].map(i => i.classList[1]);
@@ -52,28 +56,54 @@ const handleRightClick = () => {
         slide.classList.replace(slide.classList[1], classesList[0])
         }
  })
+ setTimeout(() => {rightbtn.disabled = false}, 1000);
 }
 
-// the other way to handle right click
-//const handleRightClick = () => {
-//    let myClass = slides[0].classList[1];
-//    slides.forEach((slide, index, slides) => {
-//        if (index < slides.length - 1) {
-//            slide.classList.replace(slide.classList[1], slides[index + 1].classList[1])
-//        } else if (index == slides.length - 1) { 
-//            slide.classList.replace(slide.classList[1], myClass)}
-//     })  
-//}
 const handleDotClick = (index) => {
-    console.log(index)
-   let myClasses = [... classesListOnLoad.slice(index, classesListOnLoad.length), ...classesListOnLoad.slice(0, index)];
-   console.log(myClasses);
-   slides.forEach((slide, slideIndex) => {
-    slide.classList.replace(slide.classList[1], myClasses[slideIndex]);
-   })
+    console.log(index);
+    let previouseDot = document.querySelector('#dots-container svg.selected-dot');
+    let previouseIndex = [...dots].indexOf(previouseDot);
+    let newDot = dots[index];
+    let counter = index - previouseIndex;
+    //previouseDot.classList.remove('selected-dot');
+    //newDot.classList.add('selected-dot');
+
+    if (counter > 0) {
+        handleRightClick();
+        counter--;
+        let interval = setInterval(() => {
+            if (counter === 0) {
+                clearInterval(interval)
+            } else {
+            handleRightClick();
+            counter--
+            }
+        }, 1000)
+    } else if (counter < 0) {
+        handleLeftClick();
+        counter++;
+        let interval = setInterval(() => {
+            if (counter === 0) {
+                clearInterval(interval)
+            } else {
+            handleLeftClick();
+            counter++
+            }
+        }, 1000)
+    } 
 }  
+
 //Event Listeners
 
 rightbtn.addEventListener('click', handleRightClick);
 leftbtn.addEventListener('click', handleLeftClick);
 dots.forEach((dot, index) => dot.addEventListener('click', () => handleDotClick(index)))
+
+
+//previouse dot handler: 
+//
+//let myClasses = [... classesListOnLoad.slice(index, classesListOnLoad.length), ...classesListOnLoad.slice(0, index)];
+//console.log(myClasses);
+//slides.forEach((slide, slideIndex) => {
+// slide.classList.replace(slide.classList[1], myClasses[slideIndex]);
+//})

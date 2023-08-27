@@ -1,11 +1,8 @@
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('#dots-container svg');
-console.log(dots);
 const classesListOnLoad = [...slides].map(i => i.classList[1]);
 const rightbtn = document.querySelector('#rightbtn');
-console.log(rightbtn);
 const leftbtn = document.querySelector('#leftbtn');
-console.log(leftbtn);
 
 //functions
 // slider btns handlers
@@ -60,14 +57,10 @@ const handleRightClick = () => {
 }
 
 const handleDotClick = (index) => {
-    console.log(index);
     let previouseDot = document.querySelector('#dots-container svg.selected-dot');
     let previouseIndex = [...dots].indexOf(previouseDot);
     let newDot = dots[index];
     let counter = index - previouseIndex;
-    //previouseDot.classList.remove('selected-dot');
-    //newDot.classList.add('selected-dot');
-
     if (counter > 0) {
         handleRightClick();
         counter--;
@@ -98,12 +91,3 @@ const handleDotClick = (index) => {
 rightbtn.addEventListener('click', handleRightClick);
 leftbtn.addEventListener('click', handleLeftClick);
 dots.forEach((dot, index) => dot.addEventListener('click', () => handleDotClick(index)))
-
-
-//previouse dot handler: 
-//
-//let myClasses = [... classesListOnLoad.slice(index, classesListOnLoad.length), ...classesListOnLoad.slice(0, index)];
-//console.log(myClasses);
-//slides.forEach((slide, slideIndex) => {
-// slide.classList.replace(slide.classList[1], myClasses[slideIndex]);
-//})

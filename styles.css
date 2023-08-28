@@ -409,8 +409,7 @@ section.features .wrapper .feature.six {
 /* end of app-features section */
 /* begining of slider */
 section.interface-look .wrapper {
-    min-height: 100vh;
-    max-height: calc(100vh + 100px);
+    height: calc(100vh + 56px);
 }
 section.interface-look p {
     text-align: center;
@@ -530,8 +529,8 @@ section.interface-look .slider-container .slide img {
 }
 #dots-container {
     width: 154px;
-    margin: 40px auto;
-    padding-bottom: 40px;
+    height: 20px;
+    margin: 40px auto 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -552,3 +551,30 @@ section.interface-look .slider-container .slide img {
 #dots-container svg.selected-dot circle {
     fill: var(--white);
 }
+/* End of slider section */
+section.download-app-now {
+    width: 100vh;
+    height: calc(506px + 35px + 35px);
+}
+section.download-app-now .wrapper {
+    height: calc(506px + 35px + 35px);
+    display: flex;
+    flex-direction: row;
+    border: 1px green solid;
+
+}
+section.download-app-now .wrapper .left {
+    height: 100%;
+    width: 55%;
+    border: 1px red solid;
+}
+section.download-app-now .wrapper .right {
+    height: 100%;
+    width: 45%;
+    border: 1px red solid;
+}
+section.download-app-now .wrapper .right img {
+    width: 516px;
+    height: 480px;
+}
+

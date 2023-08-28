@@ -1,0 +1,16 @@
+<svg width="232" height="91" viewBox="0 0 232 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Ellipse 4" filter="url(#filter0_d_135_721)">
+<ellipse cx="116" cy="44.5" rx="106" ry="35.5" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_135_721" x="0" y="0" width="232" height="91" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_135_721"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_135_721" result="shape"/>
+</filter>
+</defs>
+</svg>

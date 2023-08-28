@@ -555,26 +555,85 @@ section.interface-look .slider-container .slide img {
 section.download-app-now {
     width: 100vh;
     height: calc(506px + 35px + 35px);
+    margin-bottom: 110px;
+    
+
 }
 section.download-app-now .wrapper {
-    height: calc(506px + 35px + 35px);
+    height: 100%;
+    min-height: calc(506px + 35px + 35px);
     display: flex;
     flex-direction: row;
-    border: 1px green solid;
-
 }
 section.download-app-now .wrapper .left {
     height: 100%;
     width: 55%;
-    border: 1px red solid;
 }
+section.download-app-now .wrapper .left h2 {
+    margin-bottom: 17px;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+}
+section.download-app-now .wrapper .left p {
+    margin-bottom: 41px;
+    width: 100%;
+    max-width: 570px;
+    height: 87px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+section.download-app-now .wrapper .left .app-buttons {
+    margin-bottom: 59px;
+}
+section.download-app-now .wrapper .left .achievment-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+section.download-app-now .wrapper .left .achievment-cards .achievment-card {
+    width: 170px;
+    height: 176px;
+    background: var(--royal-blue);
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+section.download-app-now .wrapper .left .achievment-cards .achievment-card img {
+    width: 35px;
+    height: 35px;
+}
+section.download-app-now .wrapper .left .achievment-cards .achievment-card .number {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+section.download-app-now .wrapper .left .achievment-cards .achievment-card .title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    text-transform: uppercase;
+}
+
 section.download-app-now .wrapper .right {
     height: 100%;
     width: 45%;
-    border: 1px red solid;
 }
 section.download-app-now .wrapper .right img {
-    width: 516px;
-    height: 480px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+section.download-app-now .wrapper .right svg {
+    position: relative;
+    left: 50%;
+    transform: translate(-65%, -65%);
+    z-index: -1;
 }
 

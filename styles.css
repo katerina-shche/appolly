@@ -556,8 +556,6 @@ section.download-app-now {
     width: 100vh;
     height: calc(506px + 35px + 35px);
     margin-bottom: 110px;
-    
-
 }
 section.download-app-now .wrapper {
     height: 100%;
@@ -636,4 +634,71 @@ section.download-app-now .wrapper .right svg {
     transform: translate(-65%, -65%);
     z-index: -1;
 }
+/* end of down-load-app-now section */
+section.how-to-use {
+    background: url(./images/how-to-use-app-perfectly/Rectangle\ 15.png);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+section.how-to-use .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.how-to-use .wrapper h2 {
+    margin-top: calc(120px - 35px);
+    margin-bottom: 23px;
+}
+section.how-to-use .wrapper p {
+    margin-bottom: 60px;
+    width: 600px;
+}
+section.how-to-use .video-container {
+    position: relative;
+}
+section.how-to-use .video-container .l-circle {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.60);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.how-to-use .video-container .m-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.70);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.how-to-use .video-container .s-circle {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.how-to-use .video-container .s-circle svg path {
+    fill: var(--royal-blue);
+}
+section.how-to-use video {
+    width: 770px;
+    height: 319px;
+    background: url(/images/how-to-use-app-perfectly/image-for-video.png);
+    object-fit: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px var(--black) solid;
+}
+
 

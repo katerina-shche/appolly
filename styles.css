@@ -653,6 +653,7 @@ section.how-to-use .wrapper h2 {
 section.how-to-use .wrapper p {
     margin-bottom: 60px;
     width: 600px;
+    text-align: center;
 }
 section.how-to-use .video-container {
     position: relative;

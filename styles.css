@@ -657,8 +657,17 @@ section.how-to-use .wrapper p {
 }
 section.how-to-use .video-container {
     position: relative;
+    width: 770px;
+    height: 319px;
+    background: url(/images/how-to-use-app-perfectly/image-for-video.png);
+    object-fit: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px var(--black) solid;
+    z-index: 20;
 }
 section.how-to-use .video-container .l-circle {
+    z-index: 10;
     width: 70px;
     height: 70px;
     background: rgba(255, 255, 255, 0.60);
@@ -700,6 +709,7 @@ section.how-to-use video {
     background-position: center;
     border-radius: 10px;
     border: 1px var(--black) solid;
+    z-index: -1;
 }
 
 

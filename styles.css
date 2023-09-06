@@ -719,6 +719,10 @@ section.how-to-use video {
 }
 /* End of video section */
 /*  Begining of team section */
+.our-team .wrapper {
+    height: 130vh;
+    min-height: calc(780px + 170px);
+}
 .our-team h2 {
     text-align: center;
     font-size: 31.25px;
@@ -817,6 +821,11 @@ section.how-to-use video {
     justify-content: start;
     align-items: center;
     padding: 40px 62px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 .our-happy-customers .customer-card img {
     width: 96px;
@@ -836,4 +845,68 @@ section.how-to-use video {
 }
 .our-happy-customers .customer-card p {
     text-align: center;
+}
+.our-happy-customers .slider-container2 {
+    height: 357px;
+    width: 100%;
+    border: 1px red solid;
+    position: relative;
+}
+
+.our-happy-customers .slider-container2 .position00 {
+    left: calc(50% - 200px);
+    height: calc(357px - 28px);
+    z-index: 0;
+}
+.our-happy-customers .slider-container2 .position01 {
+    left: calc(50% - 200px);
+    height: calc(357px - 28px);
+    z-index: 1;
+}
+.our-happy-customers .slider-container2 .position02 {
+    z-index: 2;
+}
+.our-happy-customers .slider-container2 .position03 {
+    left: calc(50% + 200px);
+    height: calc(357px - 28px);
+    z-index: 1;
+}
+.our-happy-customers .slider-container2 .position04 {
+    height: calc(357px - 28px);
+    left: calc(50% + 200px);
+    z-index: 0;
+}
+ #dots-container2 {
+    width: 154px;
+    height: 20px;
+    margin: 40px auto 0px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+}
+#dots-container2 svg {
+    box-sizing: content-box;
+}
+#dots-container2 svg:hover circle {
+    fill: var(--black);
+    cursor: pointer;
+}
+#dots-container2 svg:hover {
+    padding: 1px;
+    border: 2px var(--black) solid;
+    border-radius: 50%;
+    margin: -3px;
+    
+}
+#dots-container2 svg.selected-dot2  {
+    padding: 1px;
+    border: 2px var(--black) solid;
+    border-radius: 50%;
+    margin: -1px; 
+}
+
+#dots-container2 svg.selected-dot2 circle {
+    fill: var(--black);
+   
 }

@@ -30,6 +30,12 @@ p.gray {
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
+h2 {
+    font-size: 31.25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 47.25px;
+}
 .wrapper {
     padding: 35px 134px 35px 134px;
     width: 100vw;
@@ -713,7 +719,7 @@ section.how-to-use video {
 }
 /* End of video section */
 /*  Begining of team section */
-section.our-team h2 {
+.our-team h2 {
     text-align: center;
     font-size: 31.25px;
     font-weight: 700;
@@ -722,18 +728,18 @@ section.our-team h2 {
     
 }
  
-section.our-team p {
+.our-team p {
     text-align: center;
     width: 600px; 
     margin: 23px auto 60px auto;
 }
-section.our-team .team-container {
+.our-team .team-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 5%;
 }
-section.our-team .team-container .team-member {
+.our-team .team-container .team-member {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -741,19 +747,19 @@ section.our-team .team-container .team-member {
     justify-content: space-between;
     padding: 27px;
 }
-section.our-team .team-container .team-member .photo {
+.our-team .team-container .team-member .photo {
     width: 220px;
     height: 220px;
     position: relative;
 }
-section.our-team .team-container .team-member .photo svg,
-section.our-team .team-container .team-member .photo img {
+.our-team .team-container .team-member .photo svg,
+.our-team .team-container .team-member .photo img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-section.our-team .team-container .team-member h3 {
+.our-team .team-container .team-member h3 {
     margin-top: 60px;
     font-size: 28px;
     font-weight: 700;
@@ -761,18 +767,18 @@ section.our-team .team-container .team-member h3 {
     text-transform: uppercase;
     text-align: center;
 }
-section.our-team .team-container .team-member h4 {
+.our-team .team-container .team-member h4 {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px; /* 150% */
     text-transform: uppercase;
     text-align: center;
 }
-section.our-team .team-container .team-member p {
+.our-team .team-container .team-member p {
     width: 100%;
     margin-bottom: 60px;
 }
-section.our-team .team-container .team-member ul {
+.our-team .team-container .team-member ul {
     width: 100%;
     list-style: none;
     display: flex;
@@ -780,20 +786,54 @@ section.our-team .team-container .team-member ul {
     justify-content: space-between;
 }
 
-section.our-team .team-container .team-member ul li {
+.our-team .team-container .team-member ul li {
     height: 24px;
     width: 25%;
     border-right: 1px var(--black) solid;
     text-align: center;
 }
-section.our-team .team-container .team-member ul li:last-of-type {
+.our-team .team-container .team-member ul li:last-of-type {
     border-right: none;
 }
-section.our-team .team-container .team-member ul li svg {
+.our-team .team-container .team-member ul li svg {
     width: 24px;
     height: 24px;
 }
-section.our-team .team-container .team-member ul li svg path {
+.our-team .team-container .team-member ul li svg path {
     fill: var(--black);
 }
-
+/* end of our-team section */
+.our-happy-customers {
+    background: url(./images/our-happy-customers/Rectangle\ 14.png);
+}
+.our-happy-customers .customer-card {
+    width: 770px;
+    height: 357px;
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 40px 62px;
+}
+.our-happy-customers .customer-card img {
+    width: 96px;
+    height: 96px;
+}
+.our-happy-customers .customer-card h3 {
+    margin-top: 20px;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+}
+.our-happy-customers .customer-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    margin-bottom: 8px;
+}
+.our-happy-customers .customer-card p {
+    text-align: center;
+}

@@ -711,5 +711,89 @@ section.how-to-use video {
     border: 1px var(--black) solid;
     z-index: -1;
 }
+/* End of video section */
+/*  Begining of team section */
+section.our-team h2 {
+    text-align: center;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+    
+}
+ 
+section.our-team p {
+    text-align: center;
+    width: 600px; 
+    margin: 23px auto 60px auto;
+}
+section.our-team .team-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+section.our-team .team-container .team-member {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px;
+}
+section.our-team .team-container .team-member .photo {
+    width: 220px;
+    height: 220px;
+    position: relative;
+}
+section.our-team .team-container .team-member .photo svg,
+section.our-team .team-container .team-member .photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.our-team .team-container .team-member h3 {
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+    text-align: center;
+}
+section.our-team .team-container .team-member h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    text-transform: uppercase;
+    text-align: center;
+}
+section.our-team .team-container .team-member p {
+    width: 100%;
+    margin-bottom: 60px;
+}
+section.our-team .team-container .team-member ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+section.our-team .team-container .team-member ul li {
+    height: 24px;
+    width: 25%;
+    border-right: 1px var(--black) solid;
+    text-align: center;
+}
+section.our-team .team-container .team-member ul li:last-of-type {
+    border-right: none;
+}
+section.our-team .team-container .team-member ul li svg {
+    width: 24px;
+    height: 24px;
+}
+section.our-team .team-container .team-member ul li svg path {
+    fill: var(--black);
+}
 

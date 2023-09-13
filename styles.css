@@ -810,6 +810,22 @@ section.how-to-use video {
 .our-happy-customers {
     background: url(./images/our-happy-customers/Rectangle\ 14.png);
 }
+.our-happy-customers .wrapper {
+    height: 876px;
+}
+.our-happy-customers h2 {
+    margin: calc(120px - 35px) auto 23px;
+    text-align: center;
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 47.25px; /* 151.2% */
+    text-transform: uppercase;
+}
+.our-happy-customers p {
+    width: 600px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
 .our-happy-customers .customer-card {
     width: 770px;
     height: 357px;
@@ -826,6 +842,7 @@ section.how-to-use video {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    transition: all 200ms ease;
 }
 .our-happy-customers .customer-card img {
     width: 96px;
@@ -879,7 +896,7 @@ section.how-to-use video {
  #dots-container2 {
     width: 154px;
     height: 20px;
-    margin: 40px auto 0px;
+    margin: 60px auto 0px;
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -899,14 +916,14 @@ section.how-to-use video {
     margin: -3px;
     
 }
-#dots-container2 svg.selected-dot2  {
+#dots-container2 svg.selected-dot  {
     padding: 1px;
     border: 2px var(--black) solid;
     border-radius: 50%;
     margin: -1px; 
 }
 
-#dots-container2 svg.selected-dot2 circle {
+#dots-container2 svg.selected-dot circle {
     fill: var(--black);
    
 }

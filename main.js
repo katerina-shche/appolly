@@ -2,7 +2,6 @@ const slider1 = {
     slides: document.querySelectorAll('.slide'),
     dots: document.querySelectorAll('#dots-container svg'),
     dotsContainer: document.querySelector('#dots-container'),
-    classesListOnLoad: [...document.querySelectorAll('.slide')].map(i => i.classList[1]),
     rightbtn: document.querySelector('#rightbtn'),
     leftbtn: document.querySelector('#leftbtn')
 }
@@ -10,11 +9,10 @@ const slider2 = {
     slides: document.querySelectorAll('.customer-card'),
     dots: document.querySelectorAll('#dots-container2 svg'),
     dotsContainer: document.querySelector('#dots-container2'),
-    classesListOnLoad: [...document.querySelectorAll('.customer-card')].map(i => i.classList[1]),
     rightbtn: false,
     leftbtn: false
 }
-console.log(slider1.classesListOnLoad, slider2.classesListOnLoad)
+
 //functions
 const sliderFunction = (slider) => {
 const { slides, dots, dotsContainer, rightbtn, leftbtn } = slider;
@@ -50,7 +48,6 @@ const handleRightClick = () => {
  let nextDot = undefined;   
  let classesList = [...slides].map(i => i.classList[1]);
  let currentDot = dotsContainer.querySelector('svg.selected-dot');
- console.log(currentDot);
  // move selected dot to the right
  if ([...dots].indexOf(currentDot) < dots.length - 1) {
     nextDot = currentDot.nextElementSibling;
@@ -107,5 +104,5 @@ if (leftbtn) {leftbtn.addEventListener('click', handleLeftClick)};
 dots.forEach((dot, index) => dot.addEventListener('click', () => handleDotClick(index)));
 }
 
-sliderFunction({slides, dots, classesListOnLoad, rightbtn, leftbtn} = slider1);
-sliderFunction({slides, dots, classesListOnLoad, rightbtn, leftbtn} = slider2);
+sliderFunction(slider1);
+sliderFunction(slider2);

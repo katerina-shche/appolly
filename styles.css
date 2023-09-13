@@ -926,3 +926,53 @@ section.how-to-use video {
     fill: var(--black);
    
 }
+/* end of our-happy-customer section */
+.our-recent-blog .wrapper {
+    padding: 120px 135px 240px;
+    height: fit-content;
+}
+.our-recent-blog h2 {
+    text-align: center;
+}
+.our-recent-blog p {
+    margin: 25px auto 60px;
+    text-align: center;
+    width: 600px; 
+}
+.our-recent-blog .blog-posts-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+}
+.our-recent-blog .blog-posts-container .blog-post-card {
+    width: calc(100%/3 - 20px)
+}
+.our-recent-blog .blog-posts-container .blog-post-card img {
+    width: 100%;
+    height: auto;
+}
+.our-recent-blog .blog-posts-container .blog-post-card h3 {
+    text-align: left;
+    margin: 40px 18px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    text-transform: uppercase;
+}
+.our-recent-blog .blog-posts-container .blog-post-card p {
+    text-align: left;
+    width: calc(100% - 18px - 18px);
+    margin: 10px 18px 30px;
+}
+.our-recent-blog .blog-posts-container .blog-post-card a {
+    text-align: left;
+    margin: 30px 18px 36px;
+    color: #5851EA;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+}

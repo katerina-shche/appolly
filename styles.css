@@ -271,7 +271,11 @@ img.store-logo {
     color: #fff;
 }
 /* end of hero section */
-/* about are app section */
+/* about our app section */
+.about .wrapper {
+    height: fit-content;
+    padding: 120px 135px;
+}
 section.about .wrapper h2 {
     font-size: 31.25px;
     font-weight: 700;

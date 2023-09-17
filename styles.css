@@ -52,13 +52,14 @@ header {
 .menu {
     position: absolute;
     top: 77px;
-    left: -267px;
     width: 267px;
     height: 356px;  
     background: var(--white);
     border-radius: 10px;
     padding: 67px 40px 40px 40px;
     z-index: 100;  
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.24);
 }
 .menu button {
     background: var(--royal-blue);
@@ -69,6 +70,7 @@ header {
     position: absolute;
     top: 25px;
     right: 25px;
+    cursor: pointer;
 }
 .menu button svg {
     position: absolute;
@@ -93,6 +95,12 @@ header {
 }
 .menu ul li a:visited {
     color: #5851EA;
+}
+.menu.close-menu {
+    left: -267px;
+}
+.menu.open-menu {
+    left: 0px;
 }
 header .contacts {
     display: flex;
@@ -1230,6 +1238,7 @@ footer .copyright::before {
         height: fit-content;
         width: fit-content;
         background: none;
+        cursor: pointer;
     }
     .mobile-nav .right {
         display: flex;

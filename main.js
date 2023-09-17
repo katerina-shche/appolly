@@ -1,3 +1,8 @@
+const menu = document.querySelector('#menu');
+const menuOpenBtn = document.querySelector('#menu-open-btn')
+const menuCloseBtn = document.querySelector('#menu-close-btn');
+console.log(menuCloseBtn)
+
 const slider1 = {
     slides: document.querySelectorAll('.slide'),
     dots: document.querySelectorAll('#dots-container svg'),
@@ -13,7 +18,7 @@ const slider2 = {
     leftbtn: false
 }
 
-//functions
+// slider function
 const sliderFunction = (slider) => {
 const { slides, dots, dotsContainer, rightbtn, leftbtn } = slider;
 // slider btns handlers
@@ -106,3 +111,12 @@ dots.forEach((dot, index) => dot.addEventListener('click', () => handleDotClick(
 
 sliderFunction(slider1);
 sliderFunction(slider2);
+// menu openers/closers
+const onMenuOpenBtnClick = () => {
+    menu.classList.add('open-menu')
+}
+const onMenuCloseBtnClick = () => {
+    menu.classList.replace('open-menu', 'close-menu')
+}
+menuOpenBtn.addEventListener('click', onMenuOpenBtnClick);
+menuCloseBtn.addEventListener('click', onMenuCloseBtnClick);

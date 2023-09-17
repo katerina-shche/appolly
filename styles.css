@@ -100,7 +100,7 @@ header {
     left: -267px;
 }
 .menu.open-menu {
-    left: 0px;
+    left: 40px;
 }
 header .contacts {
     display: flex;
